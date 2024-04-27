@@ -1,0 +1,24 @@
+/* style.css */
+
+body {
+    display: flex;
+    align-items: left;
+    padding-left: 20px;
+    padding-top: 50px;
+    font-size: 30px;
+    font-family: 'Montserrat';
+    line-height: 1.5;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+.main {
+    border-radius: 15px;
+    padding: 10px 20px;
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
