@@ -1,7 +1,7 @@
 /* style.css */
 
 :root {
-    --grey: rgb(169, 169, 169);
+    --grey: rgb(139, 139, 139);
 }
 
 body {
@@ -9,7 +9,7 @@ body {
     background-image: url('img/background3.jpg');
     background-size: 35%;
     background-repeat: no-repeat;
-    background-position: 40% 55%;
+    background-position: 45% 55%;
     display: flex;
     align-items: left;
     font-family: 'Nanum myeongjo', serif;
@@ -33,6 +33,25 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, div, li {
     margin-left: 70px;
     margin-top: 60px;
     text-align: left;
+}
+
+#to-do {
+    font-family: 'Nanum myeongjo', serif;
+    font-size: 20px;
+    margin-left: -10px;
+    margin-top: 100px;
+    text-align: left;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.horizontal-bar {
+    width: 70%;
+    height: 1.5px;
+    margin-left: 70px;
+    margin-top: 5px;
+    background-color: black;
 }
 
 h2 {
@@ -66,16 +85,21 @@ h2 {
     margin-right: 10px;
 }
 
+.volume-container {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+
 .slider {
     -webkit-appearance: none;
     appearance: none;
     display: block;
     width: calc(100% - 40px);
+    width: 300px;
     height: 2px;
     background: var(--grey);
-    outline: none;
-    border-radius: 10px;
-    margin-right: 200px;
+    margin-right: 5%;
 }
 
 .slider::-webkit-slider-thumb {
