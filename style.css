@@ -6,6 +6,11 @@
 }
 
 body {
+    background-color: #C8E0DA;
+    background-image: url('img/background3.jpg');
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: 40% 55%;
     display: flex;
     align-items: left;
     font-family: 'Nanum myeongjo', serif;
@@ -26,8 +31,14 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, div, li {
 
 .title {
     font-size: 30px;
-    margin-left: 250px;
-    margin-top: 100px;
+    margin-left: 70px;
+    margin-top: 60px;
+    text-align: left;
+}
+
+h2 {
+    margin-top: -30px;
+    font-size: 20px;
 }
 
 .content {
@@ -35,7 +46,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, div, li {
     font-size: 15px;
     position: fixed;
     right: 0;
-    margin-right: 200px;
+    margin-right: 125px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -60,7 +71,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, div, li {
     -webkit-appearance: none;
     appearance: none;
     display: block;
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
     height: 2px;
     background: var(--grey);
     outline: none;

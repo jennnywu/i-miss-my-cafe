@@ -119,3 +119,23 @@ sunPlayButton.addEventListener('click', () => {
         sunIcon.classList.add('fa-play');
     }
 });
+
+document.querySelectorAll('.slider').forEach(slider => {
+    const cupsAudioElement = document.getElementById('cups-audio');
+    const customersAudioElement = document.getElementById('customers-audio');
+    const drinksAudioElement = document.getElementById('drinks-audio');
+    const coffeeAudioElement = document.getElementById('coffee-audio');
+    const fireplaceAudioElement = document.getElementById('fireplace-audio');
+    const rainAudioElement = document.getElementById('rain-audio');
+    const sunAudioElement = document.getElementById('sun-audio');
+
+    slider.addEventListener('input', () => {
+        cupsAudioElement.volume = slider.value / 100;
+        customersAudioElement.volume = slider.value / 100;
+        drinksAudioElement.volume = slider.value / 100;
+        coffeeAudioElement.volume = slider.value / 100;
+        fireplaceAudioElement.volume = slider.value / 100;
+        rainAudioElement.volume = slider.value / 100;
+        sunAudioElement.volume = slider.value / 100;
+    });
+});
