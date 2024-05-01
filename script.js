@@ -24,6 +24,39 @@ const fireplaceIcon = document.getElementById('fireplace-icon');
 const rainIcon = document.getElementById('rain-icon');
 const sunIcon = document.getElementById('sun-icon');
 
+const input = document.getElementById('to-do-input');
+const incompleteList = document.getElementById('incomplete-list');
+const completeList = document.getElementById('complete-list');
+
+function moveToComplete(checkbox) {
+    const listItem = checkbox.parentElement;
+    if(checkbox.checked) {
+        completeList.appendChild(listItem);
+    } else {
+        incompleteList.appendChild(listItem);
+    }
+}
+
+document.addEventListener('change', function(event) {
+    if(event.target.type === 'checkbox') {
+        moveToComplete(event.target);
+    } else {
+
+    }
+});
+
+input.addEventListener('keypress', function(event) {
+    if(event.key === 'Enter') {
+        const task = input.value.trim();
+        if(task !== '') {
+            const listItem = document.createElement('ul');
+            listItem.innerHTML = `<input type="checkbox">${task}`;
+            incompleteList.appendChild(listItem);
+            input.value = '';
+        }
+    }
+});
+
 cupsPlayButton.addEventListener('click', () => {
     if(cupsAudio.paused) {
         cupsAudio.play();
