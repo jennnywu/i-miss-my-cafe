@@ -16,6 +16,37 @@ const fireplaceAudio = document.getElementById('fireplace-audio');
 const rainAudio = document.getElementById('rain-audio');
 const sunAudio = document.getElementById('sun-audio');
 
+const audioElements = {
+    cups: {
+        audio: document.getElementById('cups-audio'),
+        volumeIcon: document.getElementById('cups-play-button')
+    },
+    customers: {
+        audio: document.getElementById('customers-audio'),
+        volumeIcon: document.getElementById('customers-play-button').querySelector('.fa-volume-high, .fa-volume-low, .fa-volume-off')
+    },
+    drinks: {
+        audio: document.getElementById('drinks-audio'),
+        volumeIcon: document.getElementById('drinks-play-button').querySelector('.fa-volume-high, .fa-volume-low, .fa-volume-off')
+    },
+    coffee: {
+        audio: document.getElementById('coffee-audio'),
+        volumeIcon: document.getElementById('coffee-play-button').querySelector('.fa-volume-high, .fa-volume-low, .fa-volume-off')
+    },
+    fireplace: {
+        audio: document.getElementById('fireplace-audio'),
+        volumeIcon: document.getElementById('fireplace-play-button').querySelector('.fa-volume-high, .fa-volume-low, .fa-volume-off')
+    },
+    rain: {
+        audio: document.getElementById('rain-audio'),
+        volumeIcon: document.getElementById('rain-play-button').querySelector('.fa-volume-high, .fa-volume-low, .fa-volume-off')
+    },
+    sun: {
+        audio: document.getElementById('sun-audio'),
+        volumeIcon: document.getElementById('sun-play-button').querySelector('.fa-volume-high, .fa-volume-low, .fa-volume-off')
+    }
+};
+
 const drinksIcon = document.getElementById('drinks-icon');
 const cupsIcon = document.getElementById('cups-icon');
 const customersIcon = document.getElementById('customers-icon');
@@ -91,26 +122,20 @@ function toggleAudio(audio, icon) {
 
 document.querySelectorAll('.slider').forEach(slider => {
     slider.addEventListener('input', () => {
-        cupsAudio.volume = slider.value / 100;
-        customersAudio.volume = slider.value / 100;
-        drinksAudio.volume = slider.value / 100;
-        coffeeAudio.volume = slider.value / 100;
-        fireplaceAudio.volume = slider.value / 100;
-        rainAudio.volume = slider.value / 100;
-        sunAudio.volume = slider.value / 100;
-        
+        const audioId = slider.getAttribute('data-audio-id');
+        const audioElement = document.getElementById(audioId);
         const volumeIcon = slider.parentElement.querySelector('.fa-volume-high, .fa-volume-low, .fa-volume-off');
 
         console.log(slider.value);
 
-        if(volumeIcon) {
-            if(slider.value == 0 && slider.value == null) {
-                volumeIcon.className = 'fa-solid fa-volume-off';
-            } else if(slider.value <= 50) {
-                volumeIcon.className = 'fa-solid fa-volume-low';
-            } else {
-                volumeIcon.className = 'fa-solid fa-volume-high';
-            }
+        audioElement.volume = slider.value / 100;
+
+        if(slider.value == 0 || slider.value == null) {
+            volumeIcon.className = 'fa-solid fa-volume-off';
+        } else if(slider.value <= 50) {
+            volumeIcon.className = 'fa-solid fa-volume-low';
+        } else {
+            volumeIcon.className = 'fa-solid fa-volume-high';
         }
     });
 });
