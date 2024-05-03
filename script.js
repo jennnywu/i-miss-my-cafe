@@ -126,8 +126,6 @@ document.querySelectorAll('.slider').forEach(slider => {
         const audioElement = document.getElementById(audioId);
         const volumeIcon = slider.parentElement.querySelector('.fa-volume-high, .fa-volume-low, .fa-volume-off');
 
-        console.log(slider.value);
-
         audioElement.volume = slider.value / 100;
 
         if(slider.value == 0 || slider.value == null) {
@@ -137,5 +135,7 @@ document.querySelectorAll('.slider').forEach(slider => {
         } else {
             volumeIcon.className = 'fa-solid fa-volume-high';
         }
+        
+        console.log(audioId + ' volume: ' + slider.value);
     });
 });
