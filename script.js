@@ -55,7 +55,7 @@ const fireplaceIcon = document.getElementById('fireplace-icon');
 const rainIcon = document.getElementById('rain-icon');
 const sunIcon = document.getElementById('sun-icon');
 
-const input = document.getElementById('to-do-input');
+const input = document.getElementById('to-do');
 const incompleteList = document.getElementById('incomplete-list');
 const completeList = document.getElementById('complete-list');
 

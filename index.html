@@ -12,93 +12,99 @@
 </head>
 
 <body>
-    <div class="main">
-        <div class="title">
-            <h1>i miss my cafe</h1>
-            <h2>grab a cup and sit awhile.</h2>
+    <div class="container">
+        <div class="left-box">
+            <div class="title">
+                <h1 id="title-1">i miss my cafe</h1>
+                <h2 id="title-2">grab a cup and sit awhile.</h2>
+            </div>
+            <div class="todo">
+                <input id="to-do" type="text" placeholder="add a task">
+                <div class="horizontal-bar"></div>
+                <h3 >incomplete</h3>
+                <ul id="incomplete-list"></ul>
+                <h3>complete</h3>
+                <ul id="complete-list"></ul>
+            </div>
         </div>
-        <div class="to-do">
-            <input id="to-do-input" type="text" placeholder="add a task">
-            <div class="horizontal-bar"></div>
-            <h3 >incomplete</h3>
-            <ul id="incomplete-list"></ul>
-            <h3>complete</h3>
-            <ul id="complete-list"></ul>
+        <div class="middle-box">
+            <img id="background" src="img/background.jpg" alt="">
         </div>
-        <div class="content">
-            <div class="item">
-                <h3>coffee cups</h3>
-                <button id="cups-play-button"><i id='cups-icon' class="fa-solid fa-play" style="color: rgb(139, 139, 139)"></i></button>
-                <div class="volume-container">
-                    <i class="fa-solid fa-volume-high" style="color: rgb(139, 139, 139)"></i>
-                    <input type="range" min="0" max="100" value="50" class="slider" data-audio-id="cups-audio">
+        <div class="right-box">
+            <div class="sound-effects">
+                <div class="item" id="item">
+                    <h3>coffee cups</h3>
+                    <button id="cups-play-button"><i id='cups-icon' class="fa-solid fa-play" style="color: rgb(139, 139, 139)"></i></button>
+                    <div class="volume-container">
+                        <i class="fa-solid fa-volume-high" style="color: rgb(139, 139, 139)"></i>
+                        <input type="range" min="0" max="100" value="50" class="slider" data-audio-id="cups-audio">
+                    </div>
+                    <audio id="cups-audio" src="sound-effects/cups.mp3" loop></audio>
                 </div>
-                <audio id="cups-audio" src="sound-effects/cups.mp3" loop></audio>
-            </div>
-            <div class="item">
-                <h3>customers</h3>
-                <button id="customers-play-button"><i id="customers-icon" class="fa-solid fa-play" style="color: rgb(139, 139, 139)"></i></button>
-                <div class="volume-container">
-                    <i class="fa-solid fa-volume-high" style="color: rgb(139, 139, 139)"></i>
-                    <input type="range" min="0" max="100" value="50" class="slider" data-audio-id="customers-audio">
+                <div class="item">
+                    <h3>customers</h3>
+                    <button id="customers-play-button"><i id='customers-icon' class="fa-solid fa-play" style="color: rgb(139, 139, 139)"></i></button>
+                    <div class="volume-container">
+                        <i class="fa-solid fa-volume-high" style="color: rgb(139, 139, 139)"></i>
+                        <input type="range" min="0" max="100" value="50" class="slider" data-audio-id="customers-audio">
+                    </div>
+                    <audio id="customers-audio" src="sound-effects/customers.mp3" loop></audio>
                 </div>
-                <audio id="customers-audio" src="sound-effects/customers.mp3" loop></audio>
-            </div>
-            <div class="item">
-                <h3>preparing drinks</h3>
-                <button id="drinks-play-button"><i id="drinks-icon" class="fa-solid fa-play" style="color: rgb(139, 139, 139)"></i></button>
-                <div class="volume-container">
-                    <i class="fa-solid fa-volume-high" style="color: rgb(139, 139, 139)"></i>
-                    <input type="range" min="0" max="100" value="50" class="slider" data-audio-id="drinks-audio">
+                <div class="item">
+                    <h3>preparing drinks</h3>
+                    <button id="drinks-play-button"><i id="drinks-icon" class="fa-solid fa-play" style="color: rgb(139, 139, 139)"></i></button>
+                    <div class="volume-container">
+                        <i class="fa-solid fa-volume-high" style="color: rgb(139, 139, 139)"></i>
+                        <input type="range" min="0" max="100" value="50" class="slider" data-audio-id="drinks-audio">
+                    </div>
+                    <audio id="drinks-audio" src="sound-effects/drinks.mp3" loop></audio>
                 </div>
-                <audio id="drinks-audio" src="sound-effects/drinks.mp3" loop></audio>
-            </div>
-            <div class="item">
-                <h3>coffee machine</h3>
-                <button id="coffee-play-button"><i id="coffee-icon" class="fa-solid fa-play" style="color: rgb(139, 139, 139)"></i></button>
-                <div class="volume-container">
-                    <i class="fa-solid fa-volume-high" style="color: rgb(139, 139, 139)"></i>
-                    <input type="range" min="0" max="100" value="50" class="slider" data-audio-id="coffee-audio">
+                <div class="item">
+                    <h3>coffee machine</h3>
+                    <button id="coffee-play-button"><i id="coffee-icon" class="fa-solid fa-play" style="color: rgb(139, 139, 139)"></i></button>
+                    <div class="volume-container">
+                        <i class="fa-solid fa-volume-high" style="color: rgb(139, 139, 139)"></i>
+                        <input type="range" min="0" max="100" value="50" class="slider" data-audio-id="coffee-audio">
+                    </div>
+                    <audio id="coffee-audio" src="sound-effects/coffee-machine.mp3" loop></audio>
                 </div>
-                <audio id="coffee-audio" src="sound-effects/coffee-machine.mp3" loop></audio>
-            </div>
-            <div class="item">
-                <h3>fireplace</h3>
-                <button id="fireplace-play-button"><i id="fireplace-icon" class="fa-solid fa-play" style="color: rgb(139, 139, 139)"></i></button>
-                <div class="volume-container">
-                    <i class="fa-solid fa-volume-high" style="color: rgb(139, 139, 139)"></i>
-                    <input type="range" min="0" max="100" value="50" class="slider" data-audio-id="fireplace-audio">
+                <div class="item">
+                    <h3>fireplace</h3>
+                    <button id="fireplace-play-button"><i id="fireplace-icon" class="fa-solid fa-play" style="color: rgb(139, 139, 139)"></i></button>
+                    <div class="volume-container">
+                        <i class="fa-solid fa-volume-high" style="color: rgb(139, 139, 139)"></i>
+                        <input type="range" min="0" max="100" value="50" class="slider" data-audio-id="fireplace-audio">
+                    </div>
+                    <audio id="fireplace-audio" src="sound-effects/fireplace.mp3" loop></audio>
                 </div>
-                <audio id="fireplace-audio" src="sound-effects/fireplace.mp3" loop></audio>
-            </div>
-            <div class="item">
-                <h3>rainy day</h3>
-                <button id="rain-play-button"><i id="rain-icon" class="fa-solid fa-play" style="color: rgb(139, 139, 139)"></i></button>
-                <div class="volume-container">
-                    <i class="fa-solid fa-volume-high" style="color: rgb(139, 139, 139)"></i>
-                    <input type="range" min="0" max="100" value="50" class="slider" data-audio-id="rain-audio">         
+                <div class="item">
+                    <h3>rainy day</h3>
+                    <button id="rain-play-button"><i id="rain-icon" class="fa-solid fa-play" style="color: rgb(139, 139, 139)"></i></button>
+                    <div class="volume-container">
+                        <i class="fa-solid fa-volume-high" style="color: rgb(139, 139, 139)"></i>
+                        <input type="range" min="0" max="100" value="50" class="slider" data-audio-id="rain-audio">         
+                    </div>
+                    <audio id="rain-audio" src="sound-effects/rain.mp3" loop></audio>         
                 </div>
-                <audio id="rain-audio" src="sound-effects/rain.mp3" loop></audio>         
-            </div>
-            <div class="item">
-                <h3>sunny day</h3>
-                <button id="sun-play-button"><i id="sun-icon" class="fa-solid fa-play" style="color: rgb(139, 139, 139)"></i></button>
-                <div class="volume-container">
-                    <i class="fa-solid fa-volume-high" style="color: rgb(139, 139, 139)"></i>
-                    <input type="range" min="0" max="100" value="50" class="slider" data-audio-id="sun-audio">
+                <div class="item">
+                    <h3>sunny day</h3>
+                    <button id="sun-play-button"><i id="sun-icon" class="fa-solid fa-play" style="color: rgb(139, 139, 139)"></i></button>
+                    <div class="volume-container">
+                        <i class="fa-solid fa-volume-high" style="color: rgb(139, 139, 139)"></i>
+                        <input type="range" min="0" max="100" value="50" class="slider" data-audio-id="sun-audio">
+                    </div>
+                    <audio id="sun-audio" src="sound-effects/sun.mp3" loop></audio>
                 </div>
-                <audio id="sun-audio" src="sound-effects/sun.mp3" loop></audio>
             </div>
         </div>
         <div class="footer">
             <h3>
-                inspired by <a href="https://imissmycafe.com/" target="_blank" style="text-decoration: none; color: rgb(139, 139, 139)">i miss my cafe</a> & <a href="https://www.imissmylibrary.com/" target="_blank" style="text-decoration: none; color: rgb(139, 139, 139)">i miss my library</a>. 
-                sound effects from <a href="https://freesound.org/" target="_blank" style="text-decoration: none; color: rgb(139, 139, 139)">freesound</a>.
-                background from <a href="https://www.vectorstock.com/royalty-free-vector/empty-cafe-or-bar-interior-sketch-vector-22938997" target="_blank" style="text-decoration: none; color: rgb(139, 139, 139)"> vectorstock</a>.
+                inspired by <a href="https://imissmycafe.com/" target="_blank">i miss my cafe</a> & <a href="https://www.imissmylibrary.com/" target="_blank">i miss my library</a>. 
+                sound effects from <a href="https://freesound.org/" target="_blank">freesound</a>.
+                background from <a href="https://www.vectorstock.com/royalty-free-vector/empty-cafe-or-bar-interior-sketch-vector-22938997" target="_blank"> vectorstock</a>.
             </h3>
         </div>
-    </div>
-    
+    </div>    
     <script src="script.js"></script>
 </body>
 
