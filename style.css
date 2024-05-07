@@ -81,6 +81,11 @@ input[type="checkbox"] {
     background-color: black;
 }
 
+ul {
+    display: block;
+    margin-left: -40px;
+}
+
 .trash {
     color: var(--grey);
     float: right;
